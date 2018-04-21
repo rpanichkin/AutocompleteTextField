@@ -11,26 +11,54 @@ import XCTest
 
 class AutocompleteTextFieldTests: XCTestCase {
     
-    override func setUp() {
-        super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
-    
+    let textField = AutocompleteTextField(frame: .zero, suggestions: nbaTeamsSuggestions)
+
     override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+        textField.text = ""
+        
         super.tearDown()
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func setTextFieldInput(_ input: String) {
+        textField.text = input
+        textField.sendActions(for: .editingChanged)
     }
     
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+    // Text is equal to one of suggestions first part prefix"
+    func testSuccessfullAutocomplete() {
+        setTextFieldInput("Chi")
+        
+        XCTAssertEqual(textField.suggestion, "Chicago Bulls")
     }
     
+    // Test matching suggestion with min length. For input "New " expect "New York Knicks" over "New Orleans Pelicans"
+    func testShortestSuggestion() {
+        setTextFieldInput("New ")
+        
+        XCTAssertEqual(textField.suggestion, "New York Knicks")
+    }
+    
+    // No matching suggestion
+    func testNoMatchingSuggestion() {
+        setTextFieldInput("Mock input")
+        
+        XCTAssertEqual(textField.suggestion, nil)
+        XCTAssertEqual(textField.text, "Mock input")
+    }
+    
+    // Empty input
+    func testEmptyInput() {
+        setTextFieldInput(" ")
+        
+        XCTAssertEqual(textField.suggestion, nil)
+        XCTAssertEqual(textField.text, " ")
+    }
+    
+    // User presses "return" button to perform autocomplete
+    func testPerformingCompletion() {
+        setTextFieldInput("Chi")
+        _ = textField.textFieldShouldReturn(textField)
+        
+        XCTAssertEqual(textField.text, "Chicago Bulls")
+    }
 }

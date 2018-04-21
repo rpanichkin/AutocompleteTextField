@@ -8,11 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		CA01148C208B1150008B3346 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA01148B208B1150008B3346 /* AppDelegate.swift */; };
-		CA01148E208B1150008B3346 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA01148D208B1150008B3346 /* ViewController.swift */; };
+		CA01148E208B1150008B3346 /* ExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA01148D208B1150008B3346 /* ExampleViewController.swift */; };
 		CA011491208B1150008B3346 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA01148F208B1150008B3346 /* Main.storyboard */; };
 		CA011493208B1150008B3346 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA011492208B1150008B3346 /* Assets.xcassets */; };
 		CA011496208B1150008B3346 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA011494208B1150008B3346 /* LaunchScreen.storyboard */; };
 		CA0114A1208B1150008B3346 /* AutocompleteTextFieldTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0114A0208B1150008B3346 /* AutocompleteTextFieldTests.swift */; };
+		CA0114AC208B178B008B3346 /* AutocompleteTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0114AB208B178B008B3346 /* AutocompleteTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,7 +29,7 @@
 /* Begin PBXFileReference section */
 		CA011488208B1150008B3346 /* AutocompleteTextField.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AutocompleteTextField.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA01148B208B1150008B3346 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CA01148D208B1150008B3346 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CA01148D208B1150008B3346 /* ExampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleViewController.swift; sourceTree = "<group>"; };
 		CA011490208B1150008B3346 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CA011492208B1150008B3346 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CA011495208B1150008B3346 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -36,6 +37,7 @@
 		CA01149C208B1150008B3346 /* AutocompleteTextFieldTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AutocompleteTextFieldTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA0114A0208B1150008B3346 /* AutocompleteTextFieldTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutocompleteTextFieldTests.swift; sourceTree = "<group>"; };
 		CA0114A2208B1150008B3346 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CA0114AB208B178B008B3346 /* AutocompleteTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutocompleteTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,11 +80,12 @@
 			isa = PBXGroup;
 			children = (
 				CA01148B208B1150008B3346 /* AppDelegate.swift */,
-				CA01148D208B1150008B3346 /* ViewController.swift */,
+				CA01148D208B1150008B3346 /* ExampleViewController.swift */,
 				CA01148F208B1150008B3346 /* Main.storyboard */,
 				CA011492208B1150008B3346 /* Assets.xcassets */,
 				CA011494208B1150008B3346 /* LaunchScreen.storyboard */,
 				CA011497208B1150008B3346 /* Info.plist */,
+				CA0114AB208B178B008B3346 /* AutocompleteTextField.swift */,
 			);
 			path = AutocompleteTextField;
 			sourceTree = "<group>";
@@ -199,7 +202,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CA01148E208B1150008B3346 /* ViewController.swift in Sources */,
+				CA0114AC208B178B008B3346 /* AutocompleteTextField.swift in Sources */,
+				CA01148E208B1150008B3346 /* ExampleViewController.swift in Sources */,
 				CA01148C208B1150008B3346 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
